@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lince-950: #001e13;
+  --color-lince-900: #052e20;
+  --color-lince-800: #0b4530;
+  --color-lince-700: #136041;
+  --color-lince-600: #1c7b55;
+  --color-lince-200: #bfe0cf;
+  --color-lince-100: #dcefe4;
+  --color-lince-50: #eef7f1;
+  --color-arena-600: #a98a52;
+  --color-arena-500: #c8a870;
+  --color-arena-400: #d8bd8c;
+  --color-arena-100: #f2e8d2;
+  --color-crema: #f7f3e8;
+  --font-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background: var(--color-crema);
+  color: var(--color-lince-950);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, [role="button"], a { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+
+:focus-visible {
+  outline: 2px solid var(--color-arena-500);
+  outline-offset: 2px;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+.pattern-lynx {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(200,168,112,.18) 0, transparent 38%),
+    radial-gradient(circle at 90% 80%, rgba(28,123,85,.35) 0, transparent 42%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
