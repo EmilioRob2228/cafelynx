@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Clock, Minus, Plus, Search, Wallet } from "lucide-react";
+import { ArrowRight, Clock, Minus, Plus, Search, Wallet } from "lucide-react";
 import { getOrder, listMenu } from "../lib/api";
 import { lineKey, useCart } from "../lib/cart.jsx";
 import { money, STATUS } from "../lib/format";
@@ -42,7 +42,7 @@ function Hero() {
           transition={{ delay: 0.12 }}
           className="mt-3 max-w-md text-[15px] text-white/75 md:mt-4 md:text-lg"
         >
-          Arma tu pedido desde el celular y llega a la Cafetería 3 cuando esté listo. Sin esperar en la fila de los cambios de clase.
+          Arma tu pedido desde el celular y llega a la Cafetería 3 cuando esté listo. Sin esperar en la fila.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -52,9 +52,6 @@ function Hero() {
         >
           <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 md:gap-2 md:px-3.5 md:py-2">
             <Wallet size={15} className="text-arena-400" /> Pagas en caja al recoger
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 md:gap-2 md:px-3.5 md:py-2">
-            <Check size={15} className="text-arena-400" /> Seguimiento en tiempo real
           </span>
         </motion.div>
       </div>
